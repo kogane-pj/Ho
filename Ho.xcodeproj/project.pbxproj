@@ -14,6 +14,12 @@
 		8F852FDE1C887C44005D361B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FDC1C887C44005D361B /* LaunchScreen.storyboard */; };
 		8F852FE91C887C45005D361B /* HoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FE81C887C45005D361B /* HoTests.swift */; };
 		8F852FF41C887C45005D361B /* HoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FF31C887C45005D361B /* HoUITests.swift */; };
+		8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
+		8F8530041C887EC3005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
+		8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
+		8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F8530071C887ECF005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
+		8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8F8530091C887ED0005D361B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */,
+				8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F852FD01C887C44005D361B /* Ho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F852FD31C887C44005D361B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +68,8 @@
 		8F852FEF1C887C45005D361B /* HoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F852FF31C887C45005D361B /* HoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoUITests.swift; sourceTree = "<group>"; };
 		8F852FF51C887C45005D361B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8530011C887EC2005D361B /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = ../Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
+		8F8530021C887EC2005D361B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = ../Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8530071C887ECF005D361B /* pop.framework in Frameworks */,
+				8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */,
+				8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */,
+				8F8530041C887EC3005D361B /* pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +124,7 @@
 		8F852FD21C887C44005D361B /* Ho */ = {
 			isa = PBXGroup;
 			children = (
+				8F85300A1C887EDE005D361B /* Frameworks */,
 				8F852FD31C887C44005D361B /* AppDelegate.swift */,
 				8F852FD51C887C44005D361B /* ViewController.swift */,
 				8F852FD71C887C44005D361B /* Main.storyboard */,
@@ -125,6 +153,15 @@
 			path = HoUITests;
 			sourceTree = "<group>";
 		};
+		8F85300A1C887EDE005D361B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F8530011C887EC2005D361B /* Koloda.framework */,
+				8F8530021C887EC2005D361B /* pop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +172,8 @@
 				8F852FCC1C887C44005D361B /* Sources */,
 				8F852FCD1C887C44005D361B /* Frameworks */,
 				8F852FCE1C887C44005D361B /* Resources */,
+				8F8530091C887ED0005D361B /* Embed Frameworks */,
+				8F85300B1C887F18005D361B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +289,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F85300B1C887F18005D361B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F852FCC1C887C44005D361B /* Sources */ = {
@@ -397,6 +452,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Ho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koganepj.Ho;
@@ -408,6 +467,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Ho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koganepj.Ho;
