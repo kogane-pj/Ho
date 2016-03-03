@@ -15,8 +15,6 @@
 		8F852FDE1C887C44005D361B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FDC1C887C44005D361B /* LaunchScreen.storyboard */; };
 		8F852FE91C887C45005D361B /* HoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FE81C887C45005D361B /* HoTests.swift */; };
 		8F852FF41C887C45005D361B /* HoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FF31C887C45005D361B /* HoUITests.swift */; };
-		8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
-		8F8530041C887EC3005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
 		8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
 		8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F8530071C887ECF005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
@@ -95,8 +93,6 @@
 			files = (
 				8F8530071C887ECF005D361B /* pop.framework in Frameworks */,
 				8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */,
-				8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */,
-				8F8530041C887EC3005D361B /* pop.framework in Frameworks */,
 				7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
