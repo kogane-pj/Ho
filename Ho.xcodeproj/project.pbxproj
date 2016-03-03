@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A0BBB44BDF3125F629A673 /* Pods.framework */; };
 		8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD31C887C44005D361B /* AppDelegate.swift */; };
 		8F852FD61C887C44005D361B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD51C887C44005D361B /* ViewController.swift */; };
 		8F852FD91C887C44005D361B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FD71C887C44005D361B /* Main.storyboard */; };
@@ -14,12 +15,16 @@
 		8F852FDE1C887C44005D361B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FDC1C887C44005D361B /* LaunchScreen.storyboard */; };
 		8F852FE91C887C45005D361B /* HoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FE81C887C45005D361B /* HoTests.swift */; };
 		8F852FF41C887C45005D361B /* HoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FF31C887C45005D361B /* HoUITests.swift */; };
-		8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
-		8F8530041C887EC3005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
 		8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; };
 		8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F8530071C887ECF005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
 		8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530101C8883E1005D361B /* CustomKolodaView.swift */; };
+		8F8530171C8883E1005D361B /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530111C8883E1005D361B /* CustomOverlayView.swift */; };
+		8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530131C8883E1005D361B /* ExampleOverlayView.swift */; };
+		8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */; };
+		8F85301C1C888632005D361B /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F85301B1C888632005D361B /* OverlayView.xib */; };
+		8F85301D1C8886A4005D361B /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8530121C8883E1005D361B /* CustomOverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		43D9497E2EA42E27119076CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		61A0BBB44BDF3125F629A673 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		774CCB737C84643CEB871871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8F852FD01C887C44005D361B /* Ho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F852FD31C887C44005D361B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F852FD51C887C44005D361B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +78,12 @@
 		8F852FF51C887C45005D361B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8530011C887EC2005D361B /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = ../Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
 		8F8530021C887EC2005D361B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = ../Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
+		8F8530101C8883E1005D361B /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		8F8530111C8883E1005D361B /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		8F8530121C8883E1005D361B /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
+		8F8530131C8883E1005D361B /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
+		8F85301B1C888632005D361B /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +93,7 @@
 			files = (
 				8F8530071C887ECF005D361B /* pop.framework in Frameworks */,
 				8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */,
-				8F8530031C887EC3005D361B /* Koloda.framework in Frameworks */,
-				8F8530041C887EC3005D361B /* pop.framework in Frameworks */,
+				7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2330C7D248C10D691CF693EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61A0BBB44BDF3125F629A673 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74F908D23B0D4B411193884D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43D9497E2EA42E27119076CA /* Pods.debug.xcconfig */,
+				774CCB737C84643CEB871871 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8F852FC71C887C44005D361B = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +138,8 @@
 				8F852FE71C887C45005D361B /* HoTests */,
 				8F852FF21C887C45005D361B /* HoUITests */,
 				8F852FD11C887C44005D361B /* Products */,
+				74F908D23B0D4B411193884D /* Pods */,
+				2330C7D248C10D691CF693EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +156,8 @@
 		8F852FD21C887C44005D361B /* Ho */ = {
 			isa = PBXGroup;
 			children = (
+				8F85300F1C8883E1005D361B /* View */,
+				8F8530141C8883E1005D361B /* ViewController */,
 				8F85300A1C887EDE005D361B /* Frameworks */,
 				8F852FD31C887C44005D361B /* AppDelegate.swift */,
 				8F852FD51C887C44005D361B /* ViewController.swift */,
@@ -162,6 +196,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F85300F1C8883E1005D361B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F85301B1C888632005D361B /* OverlayView.xib */,
+				8F8530101C8883E1005D361B /* CustomKolodaView.swift */,
+				8F8530111C8883E1005D361B /* CustomOverlayView.swift */,
+				8F8530121C8883E1005D361B /* CustomOverlayView.xib */,
+				8F8530131C8883E1005D361B /* ExampleOverlayView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F8530141C8883E1005D361B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,11 +223,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F852FF81C887C45005D361B /* Build configuration list for PBXNativeTarget "Ho" */;
 			buildPhases = (
+				3238C7C8ADE7D98BBF9A4294 /* Check Pods Manifest.lock */,
 				8F852FCC1C887C44005D361B /* Sources */,
 				8F852FCD1C887C44005D361B /* Frameworks */,
 				8F852FCE1C887C44005D361B /* Resources */,
 				8F8530091C887ED0005D361B /* Embed Frameworks */,
 				8F85300B1C887F18005D361B /* ShellScript */,
+				61943936B60842D7C5BFE693 /* Embed Pods Frameworks */,
+				8994FADDB5186FE2B762B922 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +327,8 @@
 			files = (
 				8F852FDE1C887C44005D361B /* LaunchScreen.storyboard in Resources */,
 				8F852FDB1C887C44005D361B /* Assets.xcassets in Resources */,
+				8F85301D1C8886A4005D361B /* CustomOverlayView.xib in Resources */,
+				8F85301C1C888632005D361B /* OverlayView.xib in Resources */,
 				8F852FD91C887C44005D361B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +350,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3238C7C8ADE7D98BBF9A4294 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61943936B60842D7C5BFE693 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8994FADDB5186FE2B762B922 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F85300B1C887F18005D361B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,7 +415,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */,
+				8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */,
 				8F852FD61C887C44005D361B /* ViewController.swift in Sources */,
+				8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */,
+				8F8530171C8883E1005D361B /* CustomOverlayView.swift in Sources */,
 				8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +558,7 @@
 		};
 		8F852FF91C887C45005D361B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43D9497E2EA42E27119076CA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -465,6 +574,7 @@
 		};
 		8F852FFA1C887C45005D361B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 774CCB737C84643CEB871871 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -545,6 +655,7 @@
 				8F852FFA1C887C45005D361B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F852FFB1C887C45005D361B /* Build configuration list for PBXNativeTarget "HoTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +664,7 @@
 				8F852FFD1C887C45005D361B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F852FFE1C887C45005D361B /* Build configuration list for PBXNativeTarget "HoUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +673,7 @@
 				8F8530001C887C45005D361B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
