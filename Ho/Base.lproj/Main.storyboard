@@ -173,7 +173,7 @@
                                             <action selector="undoButtonTapped" destination="jyf-U2-Y6y" eventType="touchUpInside" id="ZTt-Gq-YLq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say Ho!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRV-wL-vjy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say Ho!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRV-wL-vjy" customClass="EffectLabel" customModule="Ho" customModuleProvider="target">
                                         <rect key="frame" x="129" y="38" width="62" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -226,6 +226,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="kolodaView" destination="UfE-Aq-GNc" id="Ogo-UP-dg3"/>
+                        <outlet property="titleLabel" destination="BRV-wL-vjy" id="yDh-hW-bm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRN-Fc-vOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
