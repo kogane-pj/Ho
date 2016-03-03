@@ -30,6 +30,9 @@ class BackgroundAnimationViewController: UIViewController {
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
     
     //MARK: IBActions
     @IBAction func leftButtonTapped() {

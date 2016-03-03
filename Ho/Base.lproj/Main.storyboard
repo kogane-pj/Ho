@@ -173,14 +173,14 @@
                                             <action selector="undoButtonTapped" destination="jyf-U2-Y6y" eventType="touchUpInside" id="ZTt-Gq-YLq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New in Gallery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRV-wL-vjy">
-                                        <rect key="frame" x="104" y="38" width="112" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say Ho!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRV-wL-vjy">
+                                        <rect key="frame" x="129" y="38" width="62" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80392156859999997" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5OF-bv-lmX" secondAttribute="trailing" constant="15" id="1SR-3U-Y8W"/>
                                     <constraint firstAttribute="bottom" secondItem="VO5-fH-L4N" secondAttribute="bottom" constant="12" id="9bX-XT-XRH"/>
@@ -200,7 +200,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.20000000000000001" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18608655427631579" green="0.88373766447368418" blue="0.89571340460526316" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dTN-E9-zna" firstAttribute="leading" secondItem="7wa-84-r72" secondAttribute="trailing" constant="50" id="2Hm-24-qND"/>
                             <constraint firstAttribute="bottom" secondItem="UfE-Aq-GNc" secondAttribute="bottom" id="4qD-KS-Cmb"/>
