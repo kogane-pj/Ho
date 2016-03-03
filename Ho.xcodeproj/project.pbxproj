@@ -20,6 +20,12 @@
 		8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530011C887EC2005D361B /* Koloda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F8530071C887ECF005D361B /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; };
 		8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530021C887EC2005D361B /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530101C8883E1005D361B /* CustomKolodaView.swift */; };
+		8F8530171C8883E1005D361B /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530111C8883E1005D361B /* CustomOverlayView.swift */; };
+		8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530131C8883E1005D361B /* ExampleOverlayView.swift */; };
+		8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */; };
+		8F85301C1C888632005D361B /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F85301B1C888632005D361B /* OverlayView.xib */; };
+		8F85301D1C8886A4005D361B /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8530121C8883E1005D361B /* CustomOverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,12 @@
 		8F852FF51C887C45005D361B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8530011C887EC2005D361B /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = ../Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
 		8F8530021C887EC2005D361B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = ../Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
+		8F8530101C8883E1005D361B /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		8F8530111C8883E1005D361B /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		8F8530121C8883E1005D361B /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
+		8F8530131C8883E1005D361B /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
+		8F85301B1C888632005D361B /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,8 @@
 		8F852FD21C887C44005D361B /* Ho */ = {
 			isa = PBXGroup;
 			children = (
+				8F85300F1C8883E1005D361B /* View */,
+				8F8530141C8883E1005D361B /* ViewController */,
 				8F85300A1C887EDE005D361B /* Frameworks */,
 				8F852FD31C887C44005D361B /* AppDelegate.swift */,
 				8F852FD51C887C44005D361B /* ViewController.swift */,
@@ -160,6 +174,26 @@
 				8F8530021C887EC2005D361B /* pop.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F85300F1C8883E1005D361B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F85301B1C888632005D361B /* OverlayView.xib */,
+				8F8530101C8883E1005D361B /* CustomKolodaView.swift */,
+				8F8530111C8883E1005D361B /* CustomOverlayView.swift */,
+				8F8530121C8883E1005D361B /* CustomOverlayView.xib */,
+				8F8530131C8883E1005D361B /* ExampleOverlayView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F8530141C8883E1005D361B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +304,8 @@
 			files = (
 				8F852FDE1C887C44005D361B /* LaunchScreen.storyboard in Resources */,
 				8F852FDB1C887C44005D361B /* Assets.xcassets in Resources */,
+				8F85301D1C8886A4005D361B /* CustomOverlayView.xib in Resources */,
+				8F85301C1C888632005D361B /* OverlayView.xib in Resources */,
 				8F852FD91C887C44005D361B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */,
+				8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */,
 				8F852FD61C887C44005D361B /* ViewController.swift in Sources */,
+				8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */,
+				8F8530171C8883E1005D361B /* CustomOverlayView.swift in Sources */,
 				8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
