@@ -25,6 +25,10 @@
 		8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */; };
 		8F85301C1C888632005D361B /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F85301B1C888632005D361B /* OverlayView.xib */; };
 		8F85301D1C8886A4005D361B /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8530121C8883E1005D361B /* CustomOverlayView.xib */; };
+		8F8530241C8891E0005D361B /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530231C8891E0005D361B /* LTMorphingLabel.framework */; };
+		8F8530251C8891FC005D361B /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530231C8891E0005D361B /* LTMorphingLabel.framework */; };
+		8F8530261C8891FC005D361B /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530231C8891E0005D361B /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F8530281C88962D005D361B /* EffectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530271C88962D005D361B /* EffectLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,7 @@
 			files = (
 				8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */,
 				8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */,
+				8F8530261C8891FC005D361B /* LTMorphingLabel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +89,8 @@
 		8F8530131C8883E1005D361B /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
 		8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
 		8F85301B1C888632005D361B /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		8F8530231C8891E0005D361B /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
+		8F8530271C88962D005D361B /* EffectLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +98,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8530241C8891E0005D361B /* LTMorphingLabel.framework in Frameworks */,
 				8F8530071C887ECF005D361B /* pop.framework in Frameworks */,
 				8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */,
+				8F8530251C8891FC005D361B /* LTMorphingLabel.framework in Frameworks */,
 				7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +126,7 @@
 		2330C7D248C10D691CF693EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F8530231C8891E0005D361B /* LTMorphingLabel.framework */,
 				61A0BBB44BDF3125F629A673 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -204,6 +214,7 @@
 				8F8530111C8883E1005D361B /* CustomOverlayView.swift */,
 				8F8530121C8883E1005D361B /* CustomOverlayView.xib */,
 				8F8530131C8883E1005D361B /* ExampleOverlayView.swift */,
+				8F8530271C88962D005D361B /* EffectLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +428,7 @@
 			files = (
 				8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */,
 				8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */,
+				8F8530281C88962D005D361B /* EffectLabel.swift in Sources */,
 				8F852FD61C887C44005D361B /* ViewController.swift in Sources */,
 				8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */,
 				8F8530171C8883E1005D361B /* CustomOverlayView.swift in Sources */,

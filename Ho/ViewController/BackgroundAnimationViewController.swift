@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 import pop
+import LTMorphingLabel
 
 private let numberOfCards: UInt = 5
 private let frameAnimationSpringBounciness:CGFloat = 9
@@ -16,9 +17,10 @@ private let frameAnimationSpringSpeed:CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
 private let kolodaAlphaValueSemiTransparent:CGFloat = 0.1
 
-class BackgroundAnimationViewController: UIViewController {
+class BackgroundAnimationViewController: UIViewController, LTMorphingLabelDelegate {
 
     @IBOutlet weak var kolodaView: CustomKolodaView!
+    @IBOutlet weak var titleLabel: EffectLabel!
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -28,8 +30,18 @@ class BackgroundAnimationViewController: UIViewController {
         kolodaView.delegate = self
         kolodaView.dataSource = self
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        self.titleLabel.delegate = self
+        self.titleLabel.morphingEffect = .Evaporate
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.changeText(self)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
     
     //MARK: IBActions
     @IBAction func leftButtonTapped() {
@@ -42,6 +54,32 @@ class BackgroundAnimationViewController: UIViewController {
     
     @IBAction func undoButtonTapped() {
         kolodaView?.revertAction()
+    }
+
+    var textArray = [
+        "Say Ho!",
+        "Ho!",
+        "Say Ho-o!",
+        "Ho-o!",
+        "Say Ho Ho Ho!",
+        "Ho Ho Ho!"
+    ]
+    
+    var i = 0
+    
+    var text:String {
+        get {
+            if i >= textArray.count {
+                i = 0
+            }
+            return textArray[i++]
+        }
+    }
+}
+
+extension BackgroundAnimationViewController {
+    func changeText(sender: AnyObject) {
+        self.titleLabel.text = text
     }
 }
 
