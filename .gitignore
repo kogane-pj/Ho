@@ -14,6 +14,7 @@ Pods/*
 .DS_Store
 
 # Xcode
+Constants.swift
 build/*
 *.pbxuser
 !default.pbxuser
