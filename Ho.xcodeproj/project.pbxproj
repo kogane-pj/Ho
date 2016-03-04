@@ -29,6 +29,7 @@
 		8F8530251C8891FC005D361B /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530231C8891E0005D361B /* LTMorphingLabel.framework */; };
 		8F8530261C8891FC005D361B /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8530231C8891E0005D361B /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F8530281C88962D005D361B /* EffectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530271C88962D005D361B /* EffectLabel.swift */; };
+		8F8530321C89E855005D361B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530311C89E855005D361B /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		8F85301B1C888632005D361B /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		8F8530231C8891E0005D361B /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
 		8F8530271C88962D005D361B /* EffectLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectLabel.swift; sourceTree = "<group>"; };
+		8F8530311C89E855005D361B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8F8530151C8883E1005D361B /* BackgroundAnimationViewController.swift */,
+				8F8530311C89E855005D361B /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			files = (
 				8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */,
 				8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */,
+				8F8530321C89E855005D361B /* SignUpViewController.swift in Sources */,
 				8F8530281C88962D005D361B /* EffectLabel.swift in Sources */,
 				8F852FD61C887C44005D361B /* ViewController.swift in Sources */,
 				8F85301A1C8883E1005D361B /* BackgroundAnimationViewController.swift in Sources */,

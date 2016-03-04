@@ -233,6 +233,24 @@
             </objects>
             <point key="canvasLocation" x="941" y="331"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="6Ua-dd-3pD">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="VoY-gL-GXx" customClass="SignUpViewController" customModule="Ho" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P3H-XV-2ew"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cya-Ku-XUK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YMe-Ga-vZw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25p-pQ-gTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="1031"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_like_normal" width="32" height="32"/>
