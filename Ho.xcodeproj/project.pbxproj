@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A0BBB44BDF3125F629A673 /* Pods.framework */; };
 		8F308B931C8AA90D0011E60C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F308B921C8AA90D0011E60C /* RecordViewController.swift */; };
+		8F308B961C8AAB640011E60C /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F308B951C8AAB640011E60C /* Empty.m */; };
 		8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD31C887C44005D361B /* AppDelegate.swift */; };
 		8F852FD61C887C44005D361B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD51C887C44005D361B /* ViewController.swift */; };
 		8F852FD91C887C44005D361B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FD71C887C44005D361B /* Main.storyboard */; };
@@ -72,6 +73,14 @@
 		61A0BBB44BDF3125F629A673 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		774CCB737C84643CEB871871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8F308B921C8AA90D0011E60C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		8F308B941C8AAB640011E60C /* Ho-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ho-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F308B951C8AAB640011E60C /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		8F308B971C8AAF940011E60C /* TPCircularBuffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPCircularBuffer.framework; path = "Pods/../build/Debug-iphoneos/TPCircularBuffer.framework"; sourceTree = "<group>"; };
+		8F308B991C8AAFA60011E60C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8F308B9B1C8AAFB10011E60C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8F308B9D1C8AAFC10011E60C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8F308B9F1C8AAFCC0011E60C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8F308BA11C8AAFD50011E60C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		8F852FD01C887C44005D361B /* Ho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F852FD31C887C44005D361B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F852FD51C887C44005D361B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +141,12 @@
 		2330C7D248C10D691CF693EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F308BA11C8AAFD50011E60C /* GLKit.framework */,
+				8F308B9F1C8AAFCC0011E60C /* Foundation.framework */,
+				8F308B9D1C8AAFC10011E60C /* AVFoundation.framework */,
+				8F308B9B1C8AAFB10011E60C /* AudioToolbox.framework */,
+				8F308B991C8AAFA60011E60C /* Accelerate.framework */,
+				8F308B971C8AAF940011E60C /* TPCircularBuffer.framework */,
 				8F8530231C8891E0005D361B /* LTMorphingLabel.framework */,
 				61A0BBB44BDF3125F629A673 /* Pods.framework */,
 			);
@@ -182,6 +197,8 @@
 				8F852FDC1C887C44005D361B /* LaunchScreen.storyboard */,
 				8F852FDF1C887C44005D361B /* Info.plist */,
 				8F8530331C89EB30005D361B /* Constants.swift */,
+				8F308B951C8AAB640011E60C /* Empty.m */,
+				8F308B941C8AAB640011E60C /* Ho-Bridging-Header.h */,
 			);
 			path = Ho;
 			sourceTree = "<group>";
@@ -445,6 +462,7 @@
 				8F308B931C8AA90D0011E60C /* RecordViewController.swift in Sources */,
 				8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */,
 				8F8530341C89EB30005D361B /* Constants.swift in Sources */,
+				8F308B961C8AAB640011E60C /* Empty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,14 +603,18 @@
 			baseConfigurationReference = 43D9497E2EA42E27119076CA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Ho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koganepj.Ho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ho/Ho-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -601,14 +623,17 @@
 			baseConfigurationReference = 774CCB737C84643CEB871871 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Ho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koganepj.Ho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ho/Ho-Bridging-Header.h";
 			};
 			name = Release;
 		};
