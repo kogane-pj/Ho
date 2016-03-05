@@ -45,6 +45,10 @@ class RecordViewController: UIViewController, EZMicrophoneDelegate {
         self.mic.delegate = self
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
