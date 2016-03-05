@@ -267,7 +267,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd6-SD-zL4" customClass="EZAudioPlot">
-                                        <rect key="frame" x="0.0" y="190" width="600" height="220"/>
+                                        <rect key="frame" x="0.0" y="140" width="600" height="220"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="KBB-8j-wwp"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="XZ5-pT-Rdb"/>
@@ -286,11 +286,31 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxN-kw-Kbj" customClass="KYShutterButton" customModule="KYShutterButton">
+                                        <rect key="frame" x="250" y="450" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Hef-jE-15Y"/>
+                                            <constraint firstAttribute="width" constant="100" id="aZ1-uS-tne"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="typeRaw">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPushRecordButton:" destination="rNp-zS-lKT" eventType="touchUpInside" id="ftn-bc-ZNV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Kd6-SD-zL4" firstAttribute="centerY" secondItem="duM-hV-PkW" secondAttribute="centerY" id="EdW-KF-VuN"/>
+                                    <constraint firstItem="Kd6-SD-zL4" firstAttribute="centerY" secondItem="duM-hV-PkW" secondAttribute="centerY" constant="-50" id="EdW-KF-VuN"/>
+                                    <constraint firstItem="bxN-kw-Kbj" firstAttribute="centerX" secondItem="duM-hV-PkW" secondAttribute="centerX" id="Mih-H8-tgj"/>
                                     <constraint firstAttribute="trailing" secondItem="Kd6-SD-zL4" secondAttribute="trailing" id="R74-41-XsM"/>
+                                    <constraint firstAttribute="bottom" secondItem="bxN-kw-Kbj" secondAttribute="bottom" constant="50" id="YRP-vb-me1"/>
                                     <constraint firstItem="Kd6-SD-zL4" firstAttribute="leading" secondItem="duM-hV-PkW" secondAttribute="leading" id="umv-9a-kW7"/>
                                 </constraints>
                             </view>
@@ -305,6 +325,7 @@
                     </view>
                     <connections>
                         <outlet property="audioPlot" destination="Kd6-SD-zL4" id="PJD-yN-zW9"/>
+                        <outlet property="recordButton" destination="bxN-kw-Kbj" id="lDg-iu-kLZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1N-kb-LH4" userLabel="First Responder" sceneMemberID="firstResponder"/>

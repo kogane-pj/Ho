@@ -8,8 +8,10 @@
 
 import UIKit
 import EZAudio
+import KYShutterButton
 
 class RecordViewController: UIViewController, EZMicrophoneDelegate {
+    @IBOutlet weak var recordButton: KYShutterButton!
     @IBOutlet weak var audioPlot: EZAudioPlot! {
         didSet {
             audioPlot.plotType = EZPlotType.Buffer
@@ -25,6 +27,17 @@ class RecordViewController: UIViewController, EZMicrophoneDelegate {
         _mic.device = EZAudioDevice.inputDevices().last as! EZAudioDevice!
         return _mic
     }()
+    
+    @IBAction func didPushRecordButton(sender: AnyObject) {
+        switch self.recordButton.buttonState {
+        case .Normal:
+            self.recordButton.buttonState = .Recording
+            break
+        case .Recording:
+            self.recordButton.buttonState = .Normal
+            break
+        }
+    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
