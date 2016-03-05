@@ -10,6 +10,9 @@
 		7CC420B8925E4683D40DE83D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A0BBB44BDF3125F629A673 /* Pods.framework */; };
 		8F308B931C8AA90D0011E60C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F308B921C8AA90D0011E60C /* RecordViewController.swift */; };
 		8F308B961C8AAB640011E60C /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F308B951C8AAB640011E60C /* Empty.m */; };
+		8F308BA41C8ABB850011E60C /* KYShutterButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F308BA31C8ABB850011E60C /* KYShutterButton.framework */; };
+		8F308BA51C8ABB950011E60C /* KYShutterButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F308BA31C8ABB850011E60C /* KYShutterButton.framework */; };
+		8F308BA61C8ABB950011E60C /* KYShutterButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F308BA31C8ABB850011E60C /* KYShutterButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F852FD41C887C44005D361B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD31C887C44005D361B /* AppDelegate.swift */; };
 		8F852FD61C887C44005D361B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F852FD51C887C44005D361B /* ViewController.swift */; };
 		8F852FD91C887C44005D361B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F852FD71C887C44005D361B /* Main.storyboard */; };
@@ -59,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8F308BA61C8ABB950011E60C /* KYShutterButton.framework in Embed Frameworks */,
 				8F8530081C887ECF005D361B /* pop.framework in Embed Frameworks */,
 				8F8530061C887ECF005D361B /* Koloda.framework in Embed Frameworks */,
 				8F8530261C8891FC005D361B /* LTMorphingLabel.framework in Embed Frameworks */,
@@ -81,6 +85,7 @@
 		8F308B9D1C8AAFC10011E60C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8F308B9F1C8AAFCC0011E60C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F308BA11C8AAFD50011E60C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8F308BA31C8ABB850011E60C /* KYShutterButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KYShutterButton.framework; path = Carthage/Build/iOS/KYShutterButton.framework; sourceTree = "<group>"; };
 		8F852FD01C887C44005D361B /* Ho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F852FD31C887C44005D361B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F852FD51C887C44005D361B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F308BA51C8ABB950011E60C /* KYShutterButton.framework in Frameworks */,
+				8F308BA41C8ABB850011E60C /* KYShutterButton.framework in Frameworks */,
 				8F8530241C8891E0005D361B /* LTMorphingLabel.framework in Frameworks */,
 				8F8530071C887ECF005D361B /* pop.framework in Frameworks */,
 				8F8530051C887ECF005D361B /* Koloda.framework in Frameworks */,
@@ -141,6 +148,7 @@
 		2330C7D248C10D691CF693EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F308BA31C8ABB850011E60C /* KYShutterButton.framework */,
 				8F308BA11C8AAFD50011E60C /* GLKit.framework */,
 				8F308B9F1C8AAFCC0011E60C /* Foundation.framework */,
 				8F308B9D1C8AAFC10011E60C /* AVFoundation.framework */,
