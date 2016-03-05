@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jyf-U2-Y6y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rNp-zS-lKT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -250,6 +250,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25p-pQ-gTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="977" y="1031"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="Spe-wg-wN2">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" id="rNp-zS-lKT" customClass="RecordViewController" customModule="Ho" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xbD-03-nbm"/>
+                        <viewControllerLayoutGuide type="bottom" id="nxI-4L-6g0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bmm-yf-FEH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duM-hV-PkW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="duM-hV-PkW" secondAttribute="bottom" id="H3a-wh-Yd7"/>
+                            <constraint firstItem="duM-hV-PkW" firstAttribute="leading" secondItem="Bmm-yf-FEH" secondAttribute="leading" id="HlO-gj-rrC"/>
+                            <constraint firstAttribute="trailing" secondItem="duM-hV-PkW" secondAttribute="trailing" id="JQd-YC-wsB"/>
+                            <constraint firstItem="duM-hV-PkW" firstAttribute="top" secondItem="Bmm-yf-FEH" secondAttribute="top" id="Mda-re-Z0g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1N-kb-LH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="1731"/>
         </scene>
     </scenes>
     <resources>
