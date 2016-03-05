@@ -9,6 +9,7 @@
 import UIKit
 import EZAudio
 import KYShutterButton
+import UNAlertView
 
 class RecordViewController: UIViewController, EZMicrophoneDelegate {
     @IBOutlet weak var recordButton: KYShutterButton!
@@ -29,16 +30,36 @@ class RecordViewController: UIViewController, EZMicrophoneDelegate {
     }()
     
     @IBAction func didPushRecordButton(sender: AnyObject) {
+        changeRecordState()
+    }
+    
+    private func changeRecordState() {
         switch self.recordButton.buttonState {
         case .Normal:
             self.recordButton.buttonState = .Recording
             break
         case .Recording:
             self.recordButton.buttonState = .Normal
+            showSaveAlert()
             break
         }
     }
     
+    private func showSaveAlert() {
+        let alertView = UNAlertView(title: "録音終了", message: "保存しますか？")
+        alertView.addButton("No", backgroundColor: Color.HoColor, action: {
+        })
+        
+        alertView.addButton("Yes", backgroundColor: Color.HoColor, action: {
+            self.saveRecordData()
+        })
+        alertView.show()
+    }
+    
+    private func saveRecordData() {
+        // TODO: 録音したファイルをアップロード
+    }
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
