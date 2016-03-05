@@ -265,7 +265,34 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duM-hV-PkW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd6-SD-zL4" customClass="EZAudioPlot">
+                                        <rect key="frame" x="0.0" y="190" width="600" height="220"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="KBB-8j-wwp"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="XZ5-pT-Rdb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gain">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="XZ5-pT-Rdb"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kd6-SD-zL4" firstAttribute="centerY" secondItem="duM-hV-PkW" secondAttribute="centerY" id="EdW-KF-VuN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kd6-SD-zL4" secondAttribute="trailing" id="R74-41-XsM"/>
+                                    <constraint firstItem="Kd6-SD-zL4" firstAttribute="leading" secondItem="duM-hV-PkW" secondAttribute="leading" id="umv-9a-kW7"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,6 +303,9 @@
                             <constraint firstItem="duM-hV-PkW" firstAttribute="top" secondItem="Bmm-yf-FEH" secondAttribute="top" id="Mda-re-Z0g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="audioPlot" destination="Kd6-SD-zL4" id="PJD-yN-zW9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1N-kb-LH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

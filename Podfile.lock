@@ -1,15 +1,15 @@
 PODS:
-  - EZAudio (1.1.5):
-    - EZAudio/Full (= 1.1.5)
-  - EZAudio/Core (1.1.5)
-  - EZAudio/Full (1.1.5):
+  - EZAudio (1.1.2):
+    - EZAudio/Full (= 1.1.2)
+  - EZAudio/Core (1.1.2)
+  - EZAudio/Full (1.1.2):
     - EZAudio/Core
-    - TPCircularBuffer (= 1.1)
+    - TPCircularBuffer (~> 0.0)
   - NCMB (2.3.0)
-  - TPCircularBuffer (1.1)
+  - TPCircularBuffer (0.0.1)
 
 DEPENDENCIES:
-  - EZAudio
+  - EZAudio (= 1.1.2)
   - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
 
 EXTERNAL SOURCES:
@@ -22,8 +22,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
 
 SPEC CHECKSUMS:
-  EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
+  EZAudio: 01373de2b1257b77be1bf13753fb1c4ea8a9777e
   NCMB: a153b3f99d7b3d530eba60dba065487c63962e2d
-  TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
+  TPCircularBuffer: 949e9632b9fb99b7274d7b2296ee22bff5841e35
 
 COCOAPODS: 0.39.0
