@@ -23,7 +23,6 @@ class FileManager: NSObject {
         var error: NSError?
         let file = NCMBFile.fileWithName(fileName, data: data)
         file.save(&error)
-        print(error)
     }
 
     func uploadFile(fileName: String, url: NSURL) {
