@@ -71,8 +71,15 @@ class RecordViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDe
     private func setupRecord() {
         self.recorder = EZRecorder(URL: getRecordFileURL(), clientFormat: self.mic.audioStreamBasicDescription(), fileType: .AIFF)
         self.recorder.delegate = self
+        _ = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("stopRecord"), userInfo: nil, repeats: false)
     }
-
+    
+    func stopRecord() {
+        if self.recordButton.buttonState == .Recording {
+            changeRecordState()
+        }
+    }
+    
     private func saveRecordData() {
         self.recorder.closeAudioFile()
         self.recorder.delegate = nil
