@@ -244,12 +244,24 @@
                     <view key="view" contentMode="scaleToFill" id="YMe-Ga-vZw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neF-b1-Imn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="neF-b1-Imn" firstAttribute="leading" secondItem="YMe-Ga-vZw" secondAttribute="leading" id="2Ez-8X-ync"/>
+                            <constraint firstAttribute="trailing" secondItem="neF-b1-Imn" secondAttribute="trailing" id="QNs-aj-dJK"/>
+                            <constraint firstAttribute="bottom" secondItem="neF-b1-Imn" secondAttribute="bottom" id="ftw-b6-pyK"/>
+                            <constraint firstItem="neF-b1-Imn" firstAttribute="top" secondItem="YMe-Ga-vZw" secondAttribute="top" id="okK-v4-a3S"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25p-pQ-gTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="1031"/>
+            <point key="canvasLocation" x="977" y="1001"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="Spe-wg-wN2">
@@ -379,11 +391,12 @@
                     <connections>
                         <outlet property="label" destination="W9H-PB-6m2" id="8vR-WW-c1i"/>
                         <segue destination="rNp-zS-lKT" kind="presentation" identifier="SplashToRecord" animates="NO" id="L1M-54-GEJ"/>
+                        <segue destination="VoY-gL-GXx" kind="presentation" identifier="SplashToSignUp" animates="NO" id="ted-K5-lbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBe-lT-I3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="1031"/>
+            <point key="canvasLocation" x="91" y="1001"/>
         </scene>
     </scenes>
     <resources>

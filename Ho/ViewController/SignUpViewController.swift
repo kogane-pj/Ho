@@ -9,4 +9,9 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
 }

@@ -11,4 +11,11 @@ import NCMB
 
 class UserManager: NSObject {
     static let sharedInstance = UserManager()
+    
+    func isLogin() -> Bool {
+        return NCMBUser.currentUser() != nil
+    }
+}
+
+class HoUser: NCMBUser {
 }

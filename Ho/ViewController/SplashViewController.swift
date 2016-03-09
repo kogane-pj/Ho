@@ -28,7 +28,12 @@ class SplashViewController: UIViewController, LTMorphingLabelDelegate {
         UIView.animateWithDuration(0.5, animations: {
             label.alpha = 0
             }, completion: { finish in
-            self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+                if UserManager.sharedInstance.isLogin() {
+                    self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+                }
+                else {
+                    self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
+                }
         })
     }
 }
