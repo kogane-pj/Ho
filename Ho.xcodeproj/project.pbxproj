@@ -36,6 +36,7 @@
 		8F8530321C89E855005D361B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530311C89E855005D361B /* SignUpViewController.swift */; };
 		8F8530341C89EB30005D361B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8530331C89EB30005D361B /* Constants.swift */; };
 		8F9D20D41C8C709C00690D50 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D31C8C709C00690D50 /* AudioManager.swift */; };
+		8F9D20D81C906CD500690D50 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D20D71C906CD500690D50 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		8F8530311C89E855005D361B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8F8530331C89EB30005D361B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F9D20D31C8C709C00690D50 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Manager/AudioManager.swift; sourceTree = "<group>"; };
+		8F9D20D71C906CD500690D50 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Manager/UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			children = (
 				8F308BAD1C8B46BF0011E60C /* FileManager.swift */,
 				8F9D20D31C8C709C00690D50 /* AudioManager.swift */,
+				8F9D20D71C906CD500690D50 /* UserManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				8F8530161C8883E1005D361B /* CustomKolodaView.swift in Sources */,
 				8F8530191C8883E1005D361B /* ExampleOverlayView.swift in Sources */,
 				8F8530321C89E855005D361B /* SignUpViewController.swift in Sources */,
+				8F9D20D81C906CD500690D50 /* UserManager.swift in Sources */,
 				8F308BA81C8AC5B80011E60C /* SplashViewController.swift in Sources */,
 				8F8530281C88962D005D361B /* EffectLabel.swift in Sources */,
 				8F852FD61C887C44005D361B /* ViewController.swift in Sources */,
