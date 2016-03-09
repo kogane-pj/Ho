@@ -244,12 +244,82 @@
                     <view key="view" contentMode="scaleToFill" id="YMe-Ga-vZw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neF-b1-Imn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-6X-YLO">
+                                        <rect key="frame" x="30" y="100" width="540" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="d8W-bk-hK4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VoY-gL-GXx" id="Gy7-jq-KzK"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeT-nH-S5W">
+                                        <rect key="frame" x="30" y="195" width="540" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="EUh-lk-cpR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VoY-gL-GXx" id="rTS-WO-FUH"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdd-gE-YHn">
+                                        <rect key="frame" x="60" y="330" width="480" height="55"/>
+                                        <color key="backgroundColor" red="0.27086759870789473" green="0.85832134048684217" blue="0.89599609374473699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="k91-9L-jjj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPushSignUp:" destination="VoY-gL-GXx" eventType="touchUpInside" id="2eB-gE-RVs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qdd-gE-YHn" firstAttribute="leading" secondItem="neF-b1-Imn" secondAttribute="leading" constant="60" id="9T3-Lo-wFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="qdd-gE-YHn" secondAttribute="trailing" constant="60" id="KKj-cD-mzg"/>
+                                    <constraint firstItem="jeT-nH-S5W" firstAttribute="leading" secondItem="neF-b1-Imn" secondAttribute="leading" constant="30" id="S5A-Bh-OUO"/>
+                                    <constraint firstItem="6tj-6X-YLO" firstAttribute="leading" secondItem="neF-b1-Imn" secondAttribute="leading" constant="30" id="VN8-NV-HTc"/>
+                                    <constraint firstItem="qdd-gE-YHn" firstAttribute="top" secondItem="jeT-nH-S5W" secondAttribute="bottom" constant="80" id="WYt-xd-3uT"/>
+                                    <constraint firstAttribute="trailing" secondItem="jeT-nH-S5W" secondAttribute="trailing" constant="30" id="Zh4-Vs-IWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="6tj-6X-YLO" secondAttribute="trailing" constant="30" id="f0u-CV-BI3"/>
+                                    <constraint firstItem="jeT-nH-S5W" firstAttribute="top" secondItem="6tj-6X-YLO" secondAttribute="bottom" constant="40" id="kSJ-g7-Pos"/>
+                                    <constraint firstItem="6tj-6X-YLO" firstAttribute="top" secondItem="neF-b1-Imn" secondAttribute="top" constant="100" id="pbE-pl-cxn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="neF-b1-Imn" firstAttribute="leading" secondItem="YMe-Ga-vZw" secondAttribute="leading" id="2Ez-8X-ync"/>
+                            <constraint firstAttribute="trailing" secondItem="neF-b1-Imn" secondAttribute="trailing" id="QNs-aj-dJK"/>
+                            <constraint firstAttribute="bottom" secondItem="neF-b1-Imn" secondAttribute="bottom" id="ftw-b6-pyK"/>
+                            <constraint firstItem="neF-b1-Imn" firstAttribute="top" secondItem="YMe-Ga-vZw" secondAttribute="top" id="okK-v4-a3S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="6tj-6X-YLO" id="Dd9-Hm-kEh"/>
+                        <outlet property="passField" destination="jeT-nH-S5W" id="GHT-c3-Tck"/>
+                        <outlet property="signUpButton" destination="qdd-gE-YHn" id="ZCZ-9V-iO4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25p-pQ-gTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="1031"/>
+            <point key="canvasLocation" x="977" y="1001"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="Spe-wg-wN2">
@@ -379,11 +449,12 @@
                     <connections>
                         <outlet property="label" destination="W9H-PB-6m2" id="8vR-WW-c1i"/>
                         <segue destination="rNp-zS-lKT" kind="presentation" identifier="SplashToRecord" animates="NO" id="L1M-54-GEJ"/>
+                        <segue destination="VoY-gL-GXx" kind="presentation" identifier="SplashToSignUp" animates="NO" id="ted-K5-lbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBe-lT-I3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="1031"/>
+            <point key="canvasLocation" x="91" y="1001"/>
         </scene>
     </scenes>
     <resources>

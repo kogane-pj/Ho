@@ -11,4 +11,21 @@ import NCMB
 
 class UserManager: NSObject {
     static let sharedInstance = UserManager()
+    
+    func isLogin() -> Bool {
+        return NCMBUser.currentUser() != nil
+    }
+
+    func signUp(name: String, password: String) -> Bool {
+        let user = NCMBUser()
+        user.userName = name
+        user.password = password
+        
+        var error: NSError? = nil
+        user.signUp(&error)
+        return error == nil
+    }
+}
+
+class HoUser: NCMBUser {
 }
