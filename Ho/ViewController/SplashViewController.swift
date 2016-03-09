@@ -12,6 +12,12 @@ import LTMorphingLabel
 class SplashViewController: UIViewController, LTMorphingLabelDelegate {
     @IBOutlet weak var label: EffectLabel!
     
+    var isFinish: Bool = false
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.label.delegate = self
@@ -19,8 +25,20 @@ class SplashViewController: UIViewController, LTMorphingLabelDelegate {
         label.text = "Ho!"
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if isFinish {
+            showView()
+        }
+    }
+    
+    private func showView() {
+        if UserManager.sharedInstance.isLogin() {
+            self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+        }
+        else {
+            self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
+        }
     }
     
     // MARK: - LTMorphingLabelDelegate
@@ -28,12 +46,8 @@ class SplashViewController: UIViewController, LTMorphingLabelDelegate {
         UIView.animateWithDuration(0.5, animations: {
             label.alpha = 0
             }, completion: { finish in
-                if UserManager.sharedInstance.isLogin() {
-                    self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
-                }
-                else {
-                    self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
-                }
+                self.showView()
+                self.isFinish = true
         })
     }
 }
