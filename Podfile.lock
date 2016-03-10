@@ -5,6 +5,7 @@ PODS:
   - EZAudio/Full (1.1.2):
     - EZAudio/Core
     - TPCircularBuffer (~> 0.0)
+  - KeychainAccess (2.3.3)
   - KYShutterButton (1.0.3)
   - NCMB (2.3.0)
   - TPCircularBuffer (0.0.1)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - EZAudio (= 1.1.2)
+  - KeychainAccess
   - KYShutterButton (= 1.0.3)
   - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`)
   - UNAlertView
@@ -27,6 +29,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   EZAudio: 01373de2b1257b77be1bf13753fb1c4ea8a9777e
+  KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf
   KYShutterButton: 2fc63b04f4471281728fd7536df5c1aaf2c56ae0
   NCMB: a153b3f99d7b3d530eba60dba065487c63962e2d
   TPCircularBuffer: 949e9632b9fb99b7274d7b2296ee22bff5841e35
