@@ -118,6 +118,8 @@ class RecordViewController: UIViewController, EZMicrophoneDelegate, EZRecorderDe
     func recorderDidClose(recorder: EZRecorder!) {
 //        FileManager.sharedInstance.uploadFile(NSUUID().UUIDString + ".aiff",
 //            url: getRecordFileURL())
-        UserManager.sharedInstance.updateHo(NSUUID().UUIDString + ".aiff", url: getRecordFileURL())
+        if UserManager.sharedInstance.updateHo(NSUUID().UUIDString + ".aiff", url: getRecordFileURL()) {
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }
     }
 }
