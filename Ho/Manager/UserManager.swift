@@ -46,19 +46,21 @@ class UserManager: NSObject {
     }
     
     func hasHoFile() -> Bool {
-        return false
+        return currentUser().fileUrl != ""
     }
 
-    func updateHo(fileName: String, url: NSURL) {
+    func updateHo(fileName: String, url: NSURL) -> Bool {
         if let _url = FileManager.sharedInstance.uploadFile(fileName, url: url, defaultUrl: nil) {
             let user = currentUser()
             user.fileUrl = _url.description
             user.setObject(_url.description, forKey: UserKey.fileUrlKey)
-            saveUser(user)
+            return saveUser(user)
         }
+        
+        return false
     }
     
-    private func saveUser(user: HoUser) {
+    private func saveUser(user: HoUser) -> Bool {
         var error: NSError?
         user.save(&error)
         if error == nil {
@@ -71,6 +73,8 @@ class UserManager: NSObject {
         else {
             keychain[KeychainUserKey.objectIdKey] = nil
         }
+        
+        return error == nil
     }
 }
 
