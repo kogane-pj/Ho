@@ -33,12 +33,14 @@ class SplashViewController: UIViewController, LTMorphingLabelDelegate {
     }
     
     private func showView() {
-        if UserManager.sharedInstance.isLogin() {
-            self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
-        }
-        else {
-            self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
-        }
+//        if UserManager.sharedInstance.isLogin() {
+//            self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+//        }
+//        else {
+//            self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
+//        }
+        
+        self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
     }
     
     // MARK: - LTMorphingLabelDelegate
