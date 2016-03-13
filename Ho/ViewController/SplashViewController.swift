@@ -40,7 +40,12 @@ class SplashViewController: UIViewController, LTMorphingLabelDelegate {
 //            self.performSegueWithIdentifier(SegueID.showSignUpViewFromSplash, sender: nil)
 //        }
         
-        self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+        if UserManager.sharedInstance.hasHoFile() {
+            self.performSegueWithIdentifier(SegueID.showMatchViewFromSplash, sender: nil)
+        }
+        else {
+            self.performSegueWithIdentifier(SegueID.showRecordViewFromSplash, sender: nil)
+        }
     }
     
     // MARK: - LTMorphingLabelDelegate
