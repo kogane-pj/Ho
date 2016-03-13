@@ -18,13 +18,20 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBAction func didPushSignUp(sender: AnyObject) {
-        if let name = self.nameField.text, let pass = self.passField.text {
-            let result = UserManager.sharedInstance.signUp(name, password: pass)
-            print(result)
-            if result == true {
-                self.dismissViewControllerAnimated(false, completion: nil)
-            }
-        }
+//        if let name = self.nameField.text, let pass = self.passField.text {
+//            let result = UserManager.sharedInstance.signUp(name, password: pass)
+//            print(result)
+//            if result == true {
+//                self.dismissViewControllerAnimated(false, completion: nil)
+//            }
+//        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        if !UserManager.sharedInstance.isNew() {
+//            self.signUpButton.setTitle("Login", forState: .Normal)
+//        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

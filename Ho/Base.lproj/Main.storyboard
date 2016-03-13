@@ -450,6 +450,7 @@
                         <outlet property="label" destination="W9H-PB-6m2" id="8vR-WW-c1i"/>
                         <segue destination="rNp-zS-lKT" kind="presentation" identifier="SplashToRecord" animates="NO" id="L1M-54-GEJ"/>
                         <segue destination="VoY-gL-GXx" kind="presentation" identifier="SplashToSignUp" animates="NO" id="ted-K5-lbC"/>
+                        <segue destination="jyf-U2-Y6y" kind="presentation" identifier="SplashToMatch" animates="NO" id="Awr-2P-XBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBe-lT-I3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,4 +470,7 @@
         <image name="ic_skip" width="34" height="34"/>
         <image name="ic_undo" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Awr-2P-XBb"/>
+    </inferredMetricsTieBreakers>
 </document>
