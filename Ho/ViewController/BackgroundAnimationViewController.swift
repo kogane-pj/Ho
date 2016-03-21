@@ -17,14 +17,30 @@ private let frameAnimationSpringSpeed:CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
 private let kolodaAlphaValueSemiTransparent:CGFloat = 0.1
 
-class BackgroundAnimationViewController: UIViewController, LTMorphingLabelDelegate {
+class BackgroundAnimationViewController: UIViewController {
 
     @IBOutlet weak var kolodaView: CustomKolodaView!
     @IBOutlet weak var titleLabel: EffectLabel!
     
+    var userList: [RecommendUser] = []
+    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        MatchManager.sharedInstance.delegate = self
+        MatchManager.sharedInstance.setup()
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    // MARK: - Private
+    private func setupView() {
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
         kolodaView.delegate = self
@@ -35,15 +51,7 @@ class BackgroundAnimationViewController: UIViewController, LTMorphingLabelDelega
         self.titleLabel.morphingEffect = .Evaporate
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.changeText(self)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-    
-    //MARK: IBActions
+    //MARK: - IBActions
     @IBAction func leftButtonTapped() {
         kolodaView?.swipe(SwipeResultDirection.Left)
     }
@@ -66,7 +74,6 @@ class BackgroundAnimationViewController: UIViewController, LTMorphingLabelDelega
     ]
     
     var i = 0
-    
     var text:String {
         get {
             if i >= textArray.count {
@@ -77,7 +84,7 @@ class BackgroundAnimationViewController: UIViewController, LTMorphingLabelDelega
     }
 }
 
-extension BackgroundAnimationViewController {
+extension BackgroundAnimationViewController: LTMorphingLabelDelegate {
     func changeText(sender: AnyObject) {
         self.titleLabel.text = text
     }
@@ -90,8 +97,27 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
         kolodaView.resetCurrentCardNumber()
     }
     
+    func kolodaDidSwipedCardAtIndex(koloda: Koloda.KolodaView, index: UInt, direction: Koloda.SwipeResultDirection) {
+        
+        if UInt(self.userList.count) > index {
+            
+            switch direction {
+            case .Left:
+                MatchManager.sharedInstance.setLikeUser(self.userList[Int(index)], direction: .Left)
+                break
+            case .Right:
+                let isMatch = MatchManager.sharedInstance.setLikeUser(self.userList[Int(index)], direction: .Right)
+                print(isMatch)
+                break
+            case .None:
+                break
+            }
+            
+            self.changeText(self)
+        }
+    }
+    
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://yalantis.com/")!)
     }
     
     func koloda(kolodaShouldApplyAppearAnimation koloda: KolodaView) -> Bool {
@@ -117,14 +143,26 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
 //MARK: KolodaViewDataSource
 extension BackgroundAnimationViewController: KolodaViewDataSource {
     func kolodaNumberOfCards(koloda: Koloda.KolodaView) -> UInt {
-        return numberOfCards
+        return UInt(self.userList.count)
     }
     
     func kolodaViewForCardAtIndex(koloda: Koloda.KolodaView, index: UInt) -> UIView {
-        return UIImageView(image: UIImage(named: "cards_\(index + 1)"))
+        let view = UIView()
+        view.backgroundColor = Color.HoCardColor
+        return view //UIImageView(image: UIImage(named: "cards_\(index + 1)"))
     }
     
     func kolodaViewForCardOverlayAtIndex(koloda: Koloda.KolodaView, index: UInt) -> Koloda.OverlayView? {
-        return nil//NSBundle.mainBundle().loadNibNamed("CustomOverlayView", owner: self, options: nil)[0] as? OverlayView
+        let view = OverlayView()
+        view.backgroundColor = UIColor.redColor()
+        return view //NSBundle.mainBundle().loadNibNamed("CustomOverlayView", owner: self, options: nil)[0] as? OverlayView
+    }
+}
+
+//MARK: MatchManagerDelegate
+extension BackgroundAnimationViewController: MatchManagerDelegate {
+    func didLoadUserData() {
+        self.userList = MatchManager.sharedInstance.getRecommendUser()
+        self.kolodaView.reloadData()
     }
 }
