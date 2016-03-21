@@ -18,12 +18,14 @@ class UserManager: NSObject {
     static let sharedInstance = UserManager()
     
     private let keychain = Keychain(service: "com.koganepj.Ho")
-    private let USER_KEY = "UserKey"
+    struct Key {
+        static let USER_KEY = "UserKey"
+    }
     
     weak var delegate: UserManagerDelegate?
         
     func currentUser() -> HoUser {
-        if let data = NSUserDefaults.standardUserDefaults().objectForKey(USER_KEY) as? NSData {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(Key.USER_KEY) as? NSData {
             if let user = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? HoUser {
                 return user
             }
@@ -60,21 +62,55 @@ class UserManager: NSObject {
         return false
     }
     
+    func addLikeUser(userId: String) {
+        let user = currentUser()
+        user.likeUser.append(userId)
+        user.setObject(user.likeUser, forKey: UserKey.likeUserKey)
+        backgroundSaveUser(user)
+    }
+    func addDisLikeUser(userId: String) {
+        let user = currentUser()
+        user.disLikeUser.append(userId)
+        user.setObject(user.disLikeUser, forKey: UserKey.disLikeUserKey)
+        backgroundSaveUser(user)
+    }
+    func addMatchUser(userId: String) {
+        let user = currentUser()
+        user.matchUser.append(userId)
+        user.setObject(user.matchUser, forKey: UserKey.matchUserKey)
+        backgroundSaveUser(user)
+    }
+    
     private func saveUser(user: HoUser) -> Bool {
         var error: NSError?
         user.save(&error)
         if error == nil {
             let encodedData = NSKeyedArchiver.archivedDataWithRootObject(user)
-            NSUserDefaults.standardUserDefaults().setObject(encodedData, forKey: USER_KEY)
+            NSUserDefaults.standardUserDefaults().setObject(encodedData, forKey: Key.USER_KEY)
             NSUserDefaults.standardUserDefaults().synchronize()
-            keychain[KeychainUserKey.objectIdKey] = user.objectId
+            self.keychain[KeychainUserKey.objectIdKey] = user.objectId
             self.delegate?.refreshUserInfo()
         }
         else {
-            keychain[KeychainUserKey.objectIdKey] = nil
+            self.keychain[KeychainUserKey.objectIdKey] = nil
         }
         
         return error == nil
+    }
+    
+    private func backgroundSaveUser(user: HoUser) {
+        user.saveInBackgroundWithBlock({ error in
+            if error == nil {
+                let encodedData = NSKeyedArchiver.archivedDataWithRootObject(user)
+                NSUserDefaults.standardUserDefaults().setObject(encodedData, forKey: Key.USER_KEY)
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.keychain[KeychainUserKey.objectIdKey] = user.objectId
+                self.delegate?.refreshUserInfo()
+            }
+            else {
+                self.keychain[KeychainUserKey.objectIdKey] = nil
+            }
+        })
     }
 }
 
@@ -91,9 +127,14 @@ class HoUser: NCMBObject, NSCoding {
             self.setObject(fileUrl, forKey: UserKey.fileUrlKey)
         }
     }
-    var watchUser: [String] = [] {
+    var likeUser: [String] = [] {
         didSet {
-            self.setObject(watchUser, forKey: UserKey.watchUserKey)
+            self.setObject(likeUser, forKey: UserKey.likeUserKey)
+        }
+    }
+    var disLikeUser: [String] = [] {
+        didSet {
+            self.setObject(disLikeUser, forKey: UserKey.disLikeUserKey)
         }
     }
     var matchUser: [String] = [] {
@@ -120,9 +161,13 @@ class HoUser: NCMBObject, NSCoding {
             self.fileUrl = f
             self.setObject(f, forKey: UserKey.fileUrlKey)
         }
-        if let w = aDecoder.decodeObjectForKey(UserKey.watchUserKey) as? [String] {
-            self.watchUser = w
-            self.setObject(w, forKey: UserKey.watchUserKey)
+        if let l = aDecoder.decodeObjectForKey(UserKey.likeUserKey) as? [String] {
+            self.likeUser = l
+            self.setObject(l, forKey: UserKey.likeUserKey)
+        }
+        if let d = aDecoder.decodeObjectForKey(UserKey.disLikeUserKey) as? [String] {
+            self.disLikeUser = d
+            self.setObject(d, forKey: UserKey.disLikeUserKey)
         }
         if let m = aDecoder.decodeObjectForKey(UserKey.matchUserKey) as? [String] {
             self.matchUser = m
@@ -134,7 +179,8 @@ class HoUser: NCMBObject, NSCoding {
         aCoder.encodeObject(objectId, forKey: UserKey.objIdKey)
         aCoder.encodeObject(id, forKey: UserKey.idKey)
         aCoder.encodeObject(fileUrl, forKey: UserKey.fileUrlKey)
-        aCoder.encodeObject(watchUser, forKey: UserKey.watchUserKey)
+        aCoder.encodeObject(likeUser, forKey: UserKey.likeUserKey)
+        aCoder.encodeObject(disLikeUser, forKey: UserKey.disLikeUserKey)
         aCoder.encodeObject(matchUser, forKey: UserKey.matchUserKey)
     }
 }
@@ -145,9 +191,10 @@ struct KeychainUserKey {
 }
 
 struct UserKey {
-    static let objIdKey: String     = "objectId"
-    static let idKey: String        = "id"
-    static let fileUrlKey: String   = "fileUrl"
-    static let watchUserKey: String = "watchUser"
-    static let matchUserKey: String = "matchUser"
+    static let objIdKey: String         = "objectId"
+    static let idKey: String            = "id"
+    static let fileUrlKey: String       = "fileUrl"
+    static let likeUserKey: String      = "likeUser"
+    static let disLikeUserKey: String   = "disLikeUser"
+    static let matchUserKey: String     = "matchUser"
 }
