@@ -43,4 +43,35 @@ class FileManager: NSObject {
         
         return defaultUrl
     }
+    
+    func downloadAudioFile(url: NSURL) -> Bool {
+        let path = NSTemporaryDirectory() + "tmp.aiff"
+        let data = getAudioData(url.description)
+        return data.writeToFile(path, atomically: true)
+    }
+
+    func getAudioData(url: String) -> NSData {
+        let fileName = url
+        if let file = NCMBFile.fileWithName(fileName, data: nil) as? NCMBFile {
+            return file.getFileData()
+        }
+        
+        return NSData()
+    }
+}
+
+public extension NCMBFile {
+    public func getFileData() -> NSData {
+        let request = NCMBURLConnection(path: "files/\(self.name)", method: "GET", data: nil)
+        
+        do {
+            if let responseData = try request.syncConnection() as? NSData {
+                return responseData
+            }
+        }
+        catch {
+        }
+        
+        return NSData()
+    }
 }
