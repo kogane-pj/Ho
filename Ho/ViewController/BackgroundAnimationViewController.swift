@@ -147,9 +147,15 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     }
     
     func kolodaViewForCardAtIndex(koloda: Koloda.KolodaView, index: UInt) -> UIView {
-        let view = UIView()
-        view.backgroundColor = Color.HoCardColor
-        return view //UIImageView(image: UIImage(named: "cards_\(index + 1)"))
+        let ru = self.userList[Int(index)]
+        let vc = MatchCardViewController.getInstance()
+        print("url: \(ru.fileUrl)")
+        vc.urlString = ru.fileUrl
+        vc.setup()
+        return vc.view
+//        let view = UIView()
+//        view.backgroundColor = Color.HoCardColor
+//        return view //UIImageView(image: UIImage(named: "cards_\(index + 1)"))
     }
     
     func kolodaViewForCardOverlayAtIndex(koloda: Koloda.KolodaView, index: UInt) -> Koloda.OverlayView? {
@@ -163,6 +169,9 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
 extension BackgroundAnimationViewController: MatchManagerDelegate {
     func didLoadUserData() {
         self.userList = MatchManager.sharedInstance.getRecommendUser()
+        for u in self.userList {
+            print("List :\(u.fileUrl) \n")
+        }
         self.kolodaView.reloadData()
     }
 }
