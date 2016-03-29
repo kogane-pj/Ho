@@ -340,6 +340,74 @@
             </objects>
             <point key="canvasLocation" x="91" y="1001"/>
         </scene>
+        <!--Match Card View Controller-->
+        <scene sceneID="ZL6-PP-Rxv">
+            <objects>
+                <viewController storyboardIdentifier="MatchCardViewController" id="0gL-cw-mc3" customClass="MatchCardViewController" customModule="Ho" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Cp-eR-Iky"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbG-JQ-U7P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uVp-x8-eDS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQN-TS-D4O">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laJ-Yf-Ikr" customClass="EZAudioPlot">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="aOt-t4-4xK"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="vxM-Ox-bC2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gain">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="aOt-t4-4xK"/>
+                                                <exclude reference="vxM-Ox-bC2"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18608655430000001" green="0.88373766450000002" blue="0.89571340460000004" alpha="0.69425675679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="laJ-Yf-Ikr" secondAttribute="bottom" id="15z-Vr-PpX"/>
+                                    <constraint firstAttribute="trailing" secondItem="laJ-Yf-Ikr" secondAttribute="trailing" id="HMZ-WN-v8B"/>
+                                    <constraint firstItem="laJ-Yf-Ikr" firstAttribute="centerY" secondItem="XQN-TS-D4O" secondAttribute="centerY" constant="-50" id="MTd-VN-adR"/>
+                                    <constraint firstItem="laJ-Yf-Ikr" firstAttribute="top" secondItem="XQN-TS-D4O" secondAttribute="top" id="RVG-kc-IkU"/>
+                                    <constraint firstItem="laJ-Yf-Ikr" firstAttribute="leading" secondItem="XQN-TS-D4O" secondAttribute="leading" id="yfl-nR-nCy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MTd-VN-adR"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XQN-TS-D4O" secondAttribute="trailing" id="CqM-QS-dwU"/>
+                            <constraint firstItem="XQN-TS-D4O" firstAttribute="top" secondItem="uVp-x8-eDS" secondAttribute="top" id="GUJ-kG-T8i"/>
+                            <constraint firstAttribute="bottom" secondItem="XQN-TS-D4O" secondAttribute="bottom" id="H54-NW-R5m"/>
+                            <constraint firstItem="XQN-TS-D4O" firstAttribute="leading" secondItem="uVp-x8-eDS" secondAttribute="leading" id="fDV-SC-7ZL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioPlot" destination="laJ-Yf-Ikr" id="bPi-lF-Ihi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4V-45-WPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="347"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_koloda" width="21" height="21"/>

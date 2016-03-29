@@ -52,10 +52,10 @@ class UserManager: NSObject {
     }
 
     func updateHo(fileName: String, url: NSURL) -> Bool {
-        if let _url = FileManager.sharedInstance.uploadFile(fileName, url: url, defaultUrl: nil) {
+        if let _ = FileManager.sharedInstance.uploadFile(fileName, url: url, defaultUrl: nil) {
             let user = currentUser()
-            user.fileUrl = _url.description
-            user.setObject(_url.description, forKey: UserKey.fileUrlKey)
+            user.fileUrl = fileName
+            user.setObject(fileName, forKey: UserKey.fileUrlKey)
             return saveUser(user)
         }
         
